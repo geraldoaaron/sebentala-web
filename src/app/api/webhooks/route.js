@@ -61,7 +61,7 @@ export async function POST(req) {
         last_name,
         image_url,
         email_addresses,
-        username,
+        username
     } = evt?.data;
 
     try{
@@ -71,8 +71,8 @@ export async function POST(req) {
             last_name,
             image_url,
             email_addresses,
-            username,
-        )
+            username
+        );
 
         if (user && eventType === "user.created") {
             try{
@@ -80,8 +80,8 @@ export async function POST(req) {
                     publicMetadata: {
                         userMongoId: user._id,
                         isAdmin: user.isAdmin,
-                    }
-                })
+                    },
+                });
             }catch(error){
                 console.log("error updating user metadata", error);
             }
@@ -93,7 +93,7 @@ export async function POST(req) {
  }
 
  if (eventType === "user.deleted"){
-    const {id} = evt?.data;
+    const { id } = evt?.data;
     try{
         await deleteUser(id);
     }catch(error){
