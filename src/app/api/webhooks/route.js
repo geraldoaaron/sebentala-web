@@ -60,7 +60,7 @@ export async function POST(req) {
         first_name,
         last_name,
         image_url,
-        email_addresseses,
+        email_addresses,
         username,
     } = evt?.data;
 
@@ -70,7 +70,7 @@ export async function POST(req) {
             first_name,
             last_name,
             image_url,
-            email_addresseses,
+            email_addresses,
             username,
         )
 
