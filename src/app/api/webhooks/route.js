@@ -77,11 +77,11 @@ export async function POST(req) {
             },
           });
         } catch (error) {
-          console.log('Error updating user metadata:', error);
+          console.log('Errorr updating user metadata:', error);
         }
       }
     } catch (error) {
-      console.log('Error creating or updating user:', error);
+      console.log('Errorr creating or updating user:', error);
       return new Response('Error occured', {
         status: 400,
       });
