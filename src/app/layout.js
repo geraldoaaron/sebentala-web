@@ -6,6 +6,7 @@ import ThemeCom from "./components/ThemeCom";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeModeScript } from "flowbite-react";
 
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
