@@ -18,7 +18,7 @@ export default function About() {
               <p>
                 TEST{' '}
                 <a
-                  href='https://go.clerk.com/fgJHKlt'
+                  href=''
                   target='_blank'
                   className='text-teal-500 hover:underline'
                 >
