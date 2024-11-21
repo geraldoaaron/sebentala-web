@@ -32,7 +32,7 @@ export default async function Home() {
         <CallToAction />
       </div>
       <div className='p-3 flex flex-col gap-8 py-7'>
-        <RecentPosts limit={3} />
+        <RecentPosts limit={9} />
         <Link
           href={'/search?category=null'}
           className='text-lg text-teal-500 hover:underline text-center'
