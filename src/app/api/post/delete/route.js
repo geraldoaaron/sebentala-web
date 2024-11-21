@@ -1,39 +1,22 @@
-import Post from '../../../../lib/models/post.model.js';
-import { connect } from '../../../../lib/mongodb/mongoose.js';
+import Post from '../../../../lib/models/post.model';
+import { connect } from '../../../../lib/mongodb/mongoose';
 import { currentUser } from '@clerk/nextjs/server';
-export const PUT = async (req) => {
+
+export const DELETE = async (req) => {
   const user = await currentUser();
   try {
     await connect();
-    const data = await req.json();
+    const data = await req?.json();
     if (
-      !user ||
-      user.publicMetadata.userMongoId !== data.userMongoId ||
-      user.publicMetadata.isAdmin !== true
+      !user.publicMetadata.isAdmin ||
+      user.publicMetadata.userMongoId !== data.userId
     ) {
-      return new Response('Unauthorized', {
-        status: 401,
-      });
+      return new Response('Unauthorized', { status: 401 });
     }
-    const newPost = await Post.findByIdAndUpdate(
-      data.postId,
-      {
-        $set: {
-          title: data.title,
-          content: data.content,
-          category: data.category,
-          image: data.image,
-        },
-      },
-      { new: true }
-    );
-    return new Response(JSON.stringify(newPost), {
-      status: 200,
-    });
+    await Post.findByIdAndDelete(data.postId);
+    return new Response('Post deleted', { status: 200 });
   } catch (error) {
-    console.log('Error creating post:', error);
-    return new Response('Error creating post', {
-      status: 500,
-    });
+    console.log('Error deleting post:', error);
+    return new Response('Error deleting post', { status: 500 });
   }
 };
