@@ -17,19 +17,9 @@ export default async function Home() {
   return (
     <div className='flex flex-col justify-center items-center'>
       <div className='flex flex-col gap-6 p-28 px-3 max-w-6xl mx-auto '>
-        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to my Blog</h1>
+        <h1 className='text-3xl font-bold lg:text-6xl'>Welcome to the web</h1>
         <p className='text-gray-500 text-sm sm:text-base'>
-          Discover a variety of articles and tutorials on topics such as web
-          development, software engineering, and programming languages, all
-          brought to you through a blog built with Next.js and{' '}
-          <a
-            href='https://go.clerk.com/fgJHKlt'
-            className='text-teal-500 hover:underline'
-            target='_blank'
-          >
-            Clerk
-          </a>
-          .
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </p>
         <Link
           href='/search'
