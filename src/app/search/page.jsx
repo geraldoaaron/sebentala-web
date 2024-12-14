@@ -143,7 +143,7 @@ export default function Search() {
           <div className='flex items-center gap-2'>
             <label className='font-semibold'>Category:</label>
             <Select onChange={handleChange} id='category'>
-              <option value='uncategorized'>Uncategorized</option>
+              <option value='null'>All</option>
               <option value='environment'>Environment</option>
               <option value='services'>Services</option>
               <option value='Products'>Products</option>

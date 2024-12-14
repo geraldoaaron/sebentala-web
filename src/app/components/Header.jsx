@@ -40,7 +40,7 @@ useEffect(() => {
         <span className='px-2 py-1 bg-gradient-to-r from-teal-300 via-green-300 to-lime-300 rounded-lg text-white'>
           Sebentala
         </span>
-        Blog
+     
       </Link>
       <form onSubmit={handleSubmit}>
         <TextInput
@@ -52,11 +52,11 @@ useEffect(() => {
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
-      
-      <Button className='w-12 h-10 lg:hidden' color='gray' pill>
+      {/*
+      < Button className='w-12 h-10 lg:hidden' color='gray' pill>
         <AiOutlineSearch />
       </Button>
-      
+      */}
       <div className='flex gap-2 md:order-2'>
       
       <Button

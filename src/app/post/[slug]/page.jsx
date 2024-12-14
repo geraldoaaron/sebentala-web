@@ -44,9 +44,9 @@ export default async function PostPage({ params }) {
       />
       <div className='flex justify-between p-3 border-b border-slate-500 mx-auto w-full max-w-2xl text-xs'>
         <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>
-        <span className='italic'>
+        {/*<span className='italic'>
           {post && (post?.content?.length / 1000).toFixed(0)} mins read
-        </span>
+        </span>*/}
       </div>
       <div
         className='p-3 max-w-2xl mx-auto w-full post-content'

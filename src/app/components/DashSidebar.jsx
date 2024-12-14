@@ -12,6 +12,7 @@ import { useSearchParams } from 'next/navigation';
 import { SignOutButton } from '@clerk/nextjs';
 import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
+import { BsFilePlus } from 'react-icons/bs';
 export default function DashSidebar() {
   const [tab, setTab] = useState('');
   const searchParams = useSearchParams();
@@ -60,6 +61,17 @@ export default function DashSidebar() {
                 as='div'
               >
                 Posts
+              </Sidebar.Item>
+            </Link>
+          )}
+          {user?.publicMetadata?.isAdmin && (
+            <Link href='/dashboard/create-post'>
+              <Sidebar.Item
+               
+                icon={BsFilePlus}
+                as='div'
+              >
+                Create Post
               </Sidebar.Item>
             </Link>
           )}

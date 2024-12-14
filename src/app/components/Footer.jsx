@@ -21,7 +21,7 @@ export default function FooterCom() {
             <span className='px-2 py-1 bg-gradient-to-r from-teal-300 via-green-300 to-lime-300 rounded-lg text-white'>
                 Sebentala
             </span>
-              Blog
+              
             </Link>
           </div>
           <div className='grid grid-cols-2 gap-8 mt-4 sm:grid-cols-3 sm:gap-6'>
@@ -40,7 +40,7 @@ export default function FooterCom() {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  Sebentala Blog
+                  Sebentala
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>

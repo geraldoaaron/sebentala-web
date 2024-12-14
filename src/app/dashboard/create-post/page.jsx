@@ -175,6 +175,9 @@ export default function CreatePostPage() {
           <Button type='submit' gradientDuoTone='purpleToPink'>
             Publish
           </Button>
+          <Button type='button' gradientDuoTone='redToYellow' href='/dashboard?tab=posts'>
+            Cancel
+          </Button>
         </form>
       </div>
     );

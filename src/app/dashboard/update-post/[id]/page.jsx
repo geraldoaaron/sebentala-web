@@ -145,9 +145,9 @@ export default function UpdatePost() {
               value={formData.category}
             >
               <option value='uncategorized'>Select a category</option>
-              <option value='javascript'>JavaScript</option>
-              <option value='reactjs'>React.js</option>
-              <option value='nextjs'>Next.js</option>
+              <option value='javascript'>Environment</option>
+              <option value='reactjs'>Services</option>
+              <option value='nextjs'>Product</option>
             </Select>
           </div>
           <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
@@ -198,6 +198,9 @@ export default function UpdatePost() {
           />
           <Button type='submit' gradientDuoTone='purpleToPink'>
             Update
+          </Button>
+          <Button type='button' gradientDuoTone='redToYellow' href='/dashboard?tab=posts'>
+            Cancel
           </Button>
           {publishError && (
             <Alert className='mt-5' color='failure'>
