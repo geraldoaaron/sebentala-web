@@ -14,6 +14,9 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+      }, 
+      fontFamily: {
+        dancing: ["Dancing Script", "cursive"],
       },
     },
   },
