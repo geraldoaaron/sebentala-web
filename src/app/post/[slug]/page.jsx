@@ -49,7 +49,7 @@ export default async function PostPage({ params }) {
         <span>{post && new Date(post.createdAt).toLocaleDateString()}</span>
       </div>
       <div
-        className='p-3 max-w-2xl mx-auto w-full post-content'
+        className='p-3 max-w-2xl mx-auto w-full post-content break-words whitespace-normal'
         dangerouslySetInnerHTML={{ __html: post?.content }}
       ></div>
       <div className='max-w-4xl mx-auto w-full'>

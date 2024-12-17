@@ -42,3 +42,10 @@ html {
 .dark .post-content a {
   color: red;
 }
+
+/* Ensures text wraps properly */
+.word-wrap {
+  word-wrap: break-word; /* Ensures words wrap */
+  overflow-wrap: break-word; /* Modern browsers */
+  white-space: normal; /* Prevents text from staying in one line */
+}
