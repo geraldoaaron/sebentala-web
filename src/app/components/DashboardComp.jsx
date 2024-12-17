@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import {
   HiArrowNarrowUp,
   HiDocumentText,
@@ -8,6 +8,7 @@ import {
 import { Button, Table } from 'flowbite-react';
 import { useUser } from '@clerk/nextjs';
 import Link from 'next/link';
+import Loading from '../Loading';
 export default function DashboardComp() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
@@ -65,7 +66,7 @@ export default function DashboardComp() {
     }
   }, [user]);
   return (
-   
+    <Suspense fallback={<Loading />}>
     <div className='p-3 md:mx-auto'>
       <div className='flex-wrap flex gap-4 justify-center'>
         <div className='flex flex-col p-3 dark:bg-slate-800 gap-4 md:w-72 w-full rounded-md shadow-md'>
@@ -164,5 +165,6 @@ export default function DashboardComp() {
         </div>
       </div>
     </div>
+    </Suspense>
   );
 }

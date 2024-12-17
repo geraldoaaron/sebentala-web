@@ -21,7 +21,7 @@ import { useState } from 'react';
 
 export default function CreatePostPage() {
   const { isSignedIn, user, isLoaded } = useUser();
-  
+  const [loading, setLoading] = useState(false);
   const [file, setFile] = useState(null);
   const [imageUploadProgress, setImageUploadProgress] = useState(null);
   const [imageUploadError, setImageUploadError] = useState(null);
@@ -69,6 +69,7 @@ export default function CreatePostPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when the submit button is clicked
     try {
       const res = await fetch('/api/post/create', {
         method: 'POST',
@@ -83,14 +84,17 @@ export default function CreatePostPage() {
       const data = await res.json();
       if (!res.ok) {
         setPublishError(data.message);
+        setLoading(false); // Reset loading after error
         return;
       }
       if (res.ok) {
         setPublishError(null);
         router.push(`/post/${data.slug}`);
+        setLoading(false); // Reset loading after error
       }
     } catch (error) {
       setPublishError('Something went wrong');
+      setLoading(false); // Reset loading after error
     }
   };
 
@@ -172,8 +176,12 @@ export default function CreatePostPage() {
                 setFormData({ ...formData, content: value });
               }}
           />
-          <Button type='submit' gradientDuoTone='purpleToPink'>
-            Publish
+          <Button
+            type='submit'
+            gradientDuoTone='purpleToPink'
+            disabled={loading} // Disable the publish button while loading
+          >
+            {loading ? 'Publishing...' : 'Publish'}
           </Button>
           <Button type='button' gradientDuoTone='redToYellow' href='/dashboard?tab=posts'>
             Cancel

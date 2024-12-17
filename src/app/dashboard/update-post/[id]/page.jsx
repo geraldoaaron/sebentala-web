@@ -26,6 +26,7 @@ export default function UpdatePost() {
   const router = useRouter();
   const pathname = usePathname();
   const postId = pathname.split('/').pop();
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -89,6 +90,7 @@ export default function UpdatePost() {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when the submit button is clicked
     try {
       const res = await fetch('/api/post/update', {
         method: 'PUT',
@@ -104,14 +106,17 @@ export default function UpdatePost() {
       const data = await res.json();
       if (!res.ok) {
         setPublishError(data.message);
+        setLoading(false); // Reset loading after error
         return;
       }
       if (res.ok) {
         setPublishError(null);
         router.push(`/post/${data.slug}`);
+        setLoading(false); // Reset loading after error
       }
     } catch (error) {
       setPublishError('Something went wrong');
+      setLoading(false); // Reset loading after error
     }
   };
   // get the initial post data using useEffect and fetch
@@ -196,8 +201,12 @@ export default function UpdatePost() {
               setFormData({ ...formData, content: value });
             }}
           />
-          <Button type='submit' gradientDuoTone='purpleToPink'>
-            Update
+          <Button
+            type='submit'
+            gradientDuoTone='purpleToPink'
+            disabled={loading} // Disable the publish button while loading
+          >
+            {loading ? 'Publishing...' : 'Publish'}
           </Button>
           <Button type='button' gradientDuoTone='redToYellow' href='/dashboard?tab=posts'>
             Cancel
