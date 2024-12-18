@@ -105,9 +105,11 @@ useEffect(() => {
             Projects
           </Navbar.Link>
         </Link>
-        <Link href='https://linktr.ee/sebentala?fbclid=PAZXh0bgNhZW0CMTEAAabcZKapmfyADqycG_WOGyHC-xzOqvmPBHRmAgDzppSjiuw6iIwzzv_5ZMo_aem_DCERvlaaXXkXGd4TkE2WRQ' target='_blank'>
+       
+        <Navbar.Link href='https://linktr.ee/sebentala?fbclid=PAZXh0bgNhZW0CMTEAAabcZKapmfyADqycG_WOGyHC-xzOqvmPBHRmAgDzppSjiuw6iIwzzv_5ZMo_aem_DCERvlaaXXkXGd4TkE2WRQ' target='_blank'>
         Merchandise
-        </Link>
+        </Navbar.Link>
+        
       </Navbar.Collapse>
     </Navbar>
   );
