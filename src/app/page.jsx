@@ -4,6 +4,14 @@ import RecentPosts from './components/RecentPosts';
 import { Suspense } from 'react';
 import Loading from './Loading'; // Import the global Loading component
 import { Button } from 'flowbite-react';
+import { Dancing_Script } from "next/font/google";
+
+// Load Dancing Script with desired configuration
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Include the font weights you need
+  display: "swap", // Prevent font swap flicker
+});
 
 export default async function Home() {
   let posts = null;
@@ -31,13 +39,13 @@ export default async function Home() {
             Sébentala occurs as an answer to the current needs of Mother Earth.
           </p>
           <p className="text-sm sm:text-base md:text-md lg:text-xl font-medium bg-gradient-to-r from-white via-cyan-300 to-cyan-600 bg-clip-text text-transparent">
-           'Journey towards sustainability<span className='text-green-400'>🍃</span>'
+           Journey towards sustainability<span className='text-green-400'>🍃</span>
           </p>
           <p className="text-white text-xs sm:text-base md:text-md lg:text-md font-medium m-0 p-0 leading-none mb-4">
            #sébentalaasah #sébentalaasih #sébentalaasuh  
           </p>
           <div className='flex flex-wrap sm:mb-0 md:mb-8 lg:mb-14 xl:mb-28'>
-             <Button gradientMonochrome="cyan" href='#recent-posts'>Explore our posts</Button>
+             <Button gradientMonochrome="cyan" href='#recent-posts'>Explore our posts 🡺</Button>
           </div>
         </div>
         
