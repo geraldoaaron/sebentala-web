@@ -45,7 +45,7 @@ export default async function Home() {
            #sébentalaasah #sébentalaasih #sébentalaasuh  
           </p>
           <div className='flex flex-wrap sm:mb-0 md:mb-8 lg:mb-14 xl:mb-28'>
-             <Button gradientMonochrome="cyan" href='#recent-posts'>Explore our posts 🡺</Button>
+             <Button gradientMonochrome="cyan" href='#recent-posts'>Explore our posts</Button>
           </div>
         </div>
         
