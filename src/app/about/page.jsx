@@ -19,7 +19,7 @@ export default function About() {
               <div className="relative z-10 flex flex-col justify-center gap-4 p-20 px-10 max-w-7xl mx-auto md:translate-y-12 lg:translate-y-16 xl:translate-y-36 xl:px-16">
                 <h1 className="text-white text-3xl font-bold lg:text-5xl">About </h1>
                 <h1 className="text-white text-3xl font-bold lg:text-5xl">us : </h1>
-                <br/>
+                
                 <p className="text-white text-sm sm:text-base md:text-md lg:text-xl">
                 Examined from the elements of the word, Sébentala consists of two words: Sé and Bentala. Sé means one, singular; and Bentala means earth, land. One earth, one land. No replica can replace the one earth we currently live on.
                 </p>
@@ -46,7 +46,7 @@ export default function About() {
                   <h1 className="font-dancing text-white text-6xl font-bold sm:text-8xl md:text-8xl lg:text-9xl">Bentala </h1>
                 </div>
                 <div className="col-start-1 col-end-7 text-center mt-28"> 
-                  <h1 className="text-white text-xs font-medium md:text-sm lg:text-md uppercase">Our vision</h1>
+                  <h1 className="text-white text-xs font-medium md:text-sm lg:text-md uppercase">-Our vision-</h1>
                   <h1 className="text-white text-xs font-normal md:text-sm lg:text-md px-8 pt-4 sm:px-40 md:px-52 lg:px-52 xl:px-56">Bentala Solution, Earth Solution. From its existence, Sébentala is expected to be able to become a driving force for creating a sustainable and environmentally friendly lifestyle for every soul who has concerned.</h1>
                 </div>
 
@@ -81,7 +81,7 @@ export default function About() {
                 <div className="relative z-10 justify-center gap-6 p-20 px-2 max-w-7xl mx-auto md:translate-y-0 lg:translate-y-0 xl:translate-y-5 grid grid-cols-6 ">
                   
                   <div className="col-start-1 col-end-7 text-center mb-20"> 
-                    <h1 className="text-white text-xs font-medium md:text-sm lg:text-md uppercase">Our mission</h1>
+                    <h1 className="text-white text-xs font-medium md:text-sm lg:text-md uppercase">-Our mission-</h1>
                     <h1 className="text-white text-xs font-medium md:text-sm lg:text-md px-8 pt-4 sm:px-40 md:px-52 lg:px-52 xl:px-56">Three missions of Sébentala: #SébentalaAsah #SébentalaAsih #SébentalaAsuh as the core basis of our activity movements.</h1>
                   </div>
                   
