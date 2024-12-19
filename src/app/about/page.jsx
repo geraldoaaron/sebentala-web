@@ -129,7 +129,7 @@ export default function About() {
                   <div className='col-start-2 col-end-6 grid h-56 gap-4 sm:col-start-4 sm:col-end-6 sm:translate-y-16 md:translate-y-12 lg:translate-y-10 xl:translate-y-14'>
                     <h1 className="text-white text-sm font-medium sm:text-lg md:text-xl lg:text-2xl uppercase">#sebentalaasuh</h1>
                     <p className="text-white text-xs sm:text-base md:text-sm lg:text-lg -mt-20">
-                    Is a form of Sébentala's concern to support quality education for students at school through the profits obtained from the two previous missions.
+                    Is a form of Sébentala&apos;s concern to support quality education for students at school through the profits obtained from the two previous missions.
                     </p>
                   </div>
                 
