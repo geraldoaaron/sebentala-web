@@ -33,17 +33,17 @@ export default function About() {
               <div className="absolute inset-0 bg-emerald-900 bg-opacity-70"></div>
               <div className="relative z-10 justify-center gap-6 p-20 px-2 max-w-7xl mx-auto md:translate-y-6 lg:translate-y-3 xl:translate-y-10 grid grid-cols-6">
                 <div className="col-start-2 col-end-5"> 
-                  <h1 className="text-white text-3xl font-bold md:text-4xl lg:text-5xl">sé : \</h1>
+                  <h1 className="text-white text-3xl font-bold md:text-4xl lg:text-5xl">sé : &#92;</h1>
                   <h1 className="text-white text-xl font-normal md:text-2xl lg:text-3xl">satu; tunggal; eka; esa</h1>
                 </div>
                 <div className="col-end-7 col-span-3 md:pl-20 lg:pl-28 pr-10">
-                  <h1 className="text-white text-3xl font-bold md:text-4xl lg:text-5xl">ben · ta · la  \</h1>
+                  <h1 className="text-white text-3xl font-bold md:text-4xl lg:text-5xl">ben &middot; ta &middot; la &#92;</h1>
                   <h1 className="text-white text-xl font-normal md:text-2xl lg:text-3xl">bumi; tanah</h1>
                 </div>
 
                 <div className="col-start-1 col-end-7 mt-40 text-center">
                   <h1 className="font-dancing text-white text-6xl font-bold sm:text-8xl md:text-8xl lg:text-9xl">Solusi</h1>
-                  <h1 className="font-dancing text-white text-6xl font-bold sm:text-8xl md:text-8xl lg:text-9xl">Bentala </h1>
+                  <h1 className="font-dancing text-white text-6xl font-bold sm:text-8xl md:text-8xl lg:text-9xl">Bentala</h1>
                 </div>
                 <div className="col-start-1 col-end-7 text-center mt-28"> 
                   <h1 className="text-white text-xs font-medium md:text-sm lg:text-md uppercase">-Our vision-</h1>
@@ -87,7 +87,7 @@ export default function About() {
                   
 
                   <div className='col-start-2 col-end-6 flex h-56 gap-4 sm:h-64 xl:h-80 2xl:h-96 sm:col-start-2 sm:col-end-4 '>
-                    <Carousel indicators={false}>
+                    <Carousel indicators={false} leftControl={<span style={{ display: "none" }} />} rightControl={<span style={{ display: "none" }} />}>
                       <img src="/images/asah.jpg" alt="..." />
                       <img src="/images/asahquote.jpg" alt="..." />
                     
@@ -105,7 +105,7 @@ export default function About() {
                   <div className='col-start-1 col-end-7 hidden md:block'></div>
               
                   <div className='col-start-2 col-end-6 flex h-56 gap-4 sm:h-64 xl:h-80 2xl:h-96 sm:col-end-6 sm:col-span-2'>
-                    <Carousel indicators={false}>
+                    <Carousel indicators={false} leftControl={<span style={{ display: "none" }} />} rightControl={<span style={{ display: "none" }} />}>
                       <img src="/images/asih.jpg" alt="..." />
                       <img src="/images/asihquote.jpg" alt="..." />
                     </Carousel>
@@ -120,7 +120,7 @@ export default function About() {
                   
 
                   <div className='col-start-2 col-end-6 flex h-56 gap-4 sm:h-64 xl:h-80 2xl:h-96 sm:col-start-2 sm:col-end-4'>
-                    <Carousel indicators={false}>
+                    <Carousel indicators={false} leftControl={<span style={{ display: "none" }} />} rightControl={<span style={{ display: "none" }} />}>
                       <img src="/images/asuh.jpg" alt="..." />
                       <img src="/images/asuhquote.jpg" alt="..." />
             
