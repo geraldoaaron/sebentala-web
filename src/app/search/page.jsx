@@ -144,9 +144,9 @@ export default function Search() {
             <label className='font-semibold'>Category:</label>
             <Select onChange={handleChange} id='category'>
               <option value='null'>All</option>
-              <option value='environment'>Environment</option>
-              <option value='services'>Services</option>
-              <option value='Products'>Products</option>
+              <option value='#sebentalaasah'>#sebentalaasah</option>
+              <option value='#sebentalaasih'>#sebentalaasih</option>
+              <option value='#sebentalaasuh'>#sebentalaasuh</option>
             </Select>
           </div>
           <Button type='submit' outline gradientDuoTone='purpleToPink'>

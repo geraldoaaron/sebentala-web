@@ -125,9 +125,9 @@ export default function CreatePostPage() {
               }
             >
               <option value='uncategorized'>Select a category</option>
-              <option value='environment'>Environment</option>
-              <option value='services'>Services</option>
-              <option value='product'>Product</option>
+              <option value='#sebentalaasah'>#sebentalaasah</option>
+              <option value='#sebentalaasih'>#sebentalaasih</option>
+              <option value='#sebentalaasuh'>#sebentalaasuh</option>
             </Select>
           </div>
           <p className='text-red-500 font-medium text-sm'>Image size must less than 3 mb</p>
