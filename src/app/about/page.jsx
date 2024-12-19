@@ -19,7 +19,7 @@ export default function About() {
               <div className="relative z-10 flex flex-col justify-center gap-4 p-20 px-10 max-w-7xl mx-auto md:translate-y-12 lg:translate-y-16 xl:translate-y-36 xl:px-16">
                 <h1 className="text-white text-3xl font-bold lg:text-5xl">About </h1>
                 <h1 className="text-white text-3xl font-bold lg:text-5xl">us : </h1>
-                
+                <br/>
                 <p className="text-white text-sm sm:text-base md:text-md lg:text-xl">
                 Examined from the elements of the word, Sébentala consists of two words: Sé and Bentala. Sé means one, singular; and Bentala means earth, land. One earth, one land. No replica can replace the one earth we currently live on.
                 </p>
@@ -87,7 +87,7 @@ export default function About() {
                   
 
                   <div className='col-start-2 col-end-6 flex h-56 gap-4 sm:h-64 xl:h-80 2xl:h-96 sm:col-start-2 sm:col-end-4 '>
-                    <Carousel indicators={false} leftControl={<span style={{ display: "none" }} />} rightControl={<span style={{ display: "none" }} />}>
+                    <Carousel indicators={false}>
                       <img src="/images/asah.jpg" alt="..." />
                       <img src="/images/asahquote.jpg" alt="..." />
                     
@@ -105,7 +105,7 @@ export default function About() {
                   <div className='col-start-1 col-end-7 hidden md:block'></div>
               
                   <div className='col-start-2 col-end-6 flex h-56 gap-4 sm:h-64 xl:h-80 2xl:h-96 sm:col-end-6 sm:col-span-2'>
-                    <Carousel indicators={false} leftControl={<span style={{ display: "none" }} />} rightControl={<span style={{ display: "none" }} />}>
+                    <Carousel indicators={false}>
                       <img src="/images/asih.jpg" alt="..." />
                       <img src="/images/asihquote.jpg" alt="..." />
                     </Carousel>
@@ -120,7 +120,7 @@ export default function About() {
                   
 
                   <div className='col-start-2 col-end-6 flex h-56 gap-4 sm:h-64 xl:h-80 2xl:h-96 sm:col-start-2 sm:col-end-4'>
-                    <Carousel indicators={false} leftControl={<span style={{ display: "none" }} />} rightControl={<span style={{ display: "none" }} />}>
+                    <Carousel indicators={false}>
                       <img src="/images/asuh.jpg" alt="..." />
                       <img src="/images/asuhquote.jpg" alt="..." />
             
