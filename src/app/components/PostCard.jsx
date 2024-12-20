@@ -8,7 +8,7 @@ export default function PostCard({ post }) {
             <img
               src={post.image}
               alt='post cover'
-              className='sm:w-full sm:h-full object-cover transition-transform duration-300 group-hover:scale-110'
+              className='h-[260px] w-[560px] sm:w-full sm:h-full object-cover transition-transform duration-300 group-hover:scale-110'
             />
          
         </div>
