@@ -1,5 +1,6 @@
 'use client';
 import { Footer } from 'flowbite-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   BsEnvelope,
@@ -9,7 +10,7 @@ import {
 } from 'react-icons/bs';
 export default function FooterCom() {
   return (
-    <Footer container className='border border-t-8 border-teal-500'>
+    <Footer container className='border border-t-8 border-cyan-600 bg-cyan-600'>
       <div className='w-full max-w-7xl mx-auto'>
         <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
           <div className='mt-5'>
@@ -25,14 +26,17 @@ export default function FooterCom() {
             href='/'
             className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
           >
-            <span className='px-2 py-1 bg-gradient-to-r from-teal-300 via-green-300 to-lime-300 rounded-lg text-white'>
-              Sébentala
-            </span>
+            <Image 
+              src="/images/logosebentala.png" 
+              alt="Logo"
+              width={130}  // Set appropriate width
+              height={30}  // Set appropriate height  
+            />
           </Link>
-          <div className='flex gap-6 mt-4 sm:mt-0 justify-end'>
-            <Footer.Icon href='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRwRrtbdptxzRSpPqJKbdTLMHVhClPPtMBqqZtTfbcNDpLZzCkhRPkqTDQZkbdcVJbVZjgzn' target='_blank' icon={BsEnvelope} />
-            <Footer.Icon href='https://www.instagram.com/sebentala/' target='_blank' icon={BsInstagram} />
-            <Footer.Icon href='https://api.whatsapp.com/send/?phone=628811238124&text&type=phone_number&app_absent=0' target='_blank' icon={BsWhatsapp} />
+          <div className='flex gap-6 mt-4 sm:mt-0 justify-end '>
+            <Footer.Icon href='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRwRrtbdptxzRSpPqJKbdTLMHVhClPPtMBqqZtTfbcNDpLZzCkhRPkqTDQZkbdcVJbVZjgzn' target='_blank' icon={BsEnvelope} className='text-white' />
+            <Footer.Icon href='https://www.instagram.com/sebentala/' target='_blank' icon={BsInstagram} className='text-white'/>
+            <Footer.Icon href='https://api.whatsapp.com/send/?phone=628811238124&text&type=phone_number&app_absent=0' target='_blank' icon={BsWhatsapp} className='text-white'/>
           </div>
         </div>
       </div>

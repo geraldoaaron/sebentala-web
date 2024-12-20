@@ -9,6 +9,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { dark, light } from '@clerk/themes';
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Header() {
 const path = usePathname();
@@ -32,14 +33,20 @@ useEffect(() => {
 }, [searchParams]);
 
   return (
-    <Navbar className='border-b-2'>
+    <Navbar className='border-b-2 border-cyan-600 bg-cyan-600'>
       <Link
         href='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-        <span className='px-2 py-1 bg-gradient-to-r from-teal-300 via-green-300 to-lime-300 rounded-lg text-white'>
-          Sebentala
-        </span>
+       
+        <Image 
+          src="/images/logosebentala.png" 
+          alt="Logo"
+          width={130}  // Set appropriate width
+          height={30}  // Set appropriate height  
+        />
+
+       
      
       </Link>
       <form onSubmit={handleSubmit}>
@@ -80,7 +87,7 @@ useEffect(() => {
 
         <SignedOut>
             <Link href='/sign-in'>
-                <Button gradientDuoTone='purpleToBlue' outline>
+                <Button gradientDuoTone='greenToBlue' outline>
                 Sign In
                 </Button>
             </Link>
@@ -91,22 +98,22 @@ useEffect(() => {
       </div>
       <Navbar.Collapse>
         <Link href='/'>
-          <Navbar.Link active={path === '/'} as={'div'}>
+          <Navbar.Link active={path === '/'} as={'div'} className='text-white'>
             Home
           </Navbar.Link>
         </Link>
-        <Link href='/about'>
-          <Navbar.Link active={path === '/about'} as={'div'}>
+        <Link href='/about' >
+          <Navbar.Link active={path === '/about'} as={'div'} className='text-white'>
             About
           </Navbar.Link>
         </Link>
         <Link href='/projects'>
-          <Navbar.Link active={path === '/projects'} as={'div'}>
+          <Navbar.Link active={path === '/projects'} as={'div'} className='text-white'>
             Projects
           </Navbar.Link>
         </Link>
        
-        <Navbar.Link href='https://linktr.ee/sebentala?fbclid=PAZXh0bgNhZW0CMTEAAabcZKapmfyADqycG_WOGyHC-xzOqvmPBHRmAgDzppSjiuw6iIwzzv_5ZMo_aem_DCERvlaaXXkXGd4TkE2WRQ' target='_blank'>
+        <Navbar.Link href='https://linktr.ee/sebentala?fbclid=PAZXh0bgNhZW0CMTEAAabcZKapmfyADqycG_WOGyHC-xzOqvmPBHRmAgDzppSjiuw6iIwzzv_5ZMo_aem_DCERvlaaXXkXGd4TkE2WRQ' target='_blank' className='text-white'>
         Merchandise
         </Navbar.Link>
         
