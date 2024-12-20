@@ -27,8 +27,8 @@ export default function FooterCom() {
             className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
           >
             <div>
-              <Image 
-                src="/images/logosebentala.png" 
+              <img 
+                src="/images/logo.png" 
                 alt="Logo"
                 width={130}  // Set appropriate width
                 height={30}  // Set appropriate height  
