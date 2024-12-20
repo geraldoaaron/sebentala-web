@@ -1,5 +1,6 @@
 'use client';
 import { Footer } from 'flowbite-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import {
   BsEnvelope,
@@ -25,12 +26,14 @@ export default function FooterCom() {
             href='/'
             className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
           >
-            <img 
-              src="/images/logosebentala.png" 
-              alt="Logo"
-              width={130}  // Set appropriate width
-              height={30}  // Set appropriate height  
-            />
+            <div>
+              <Image 
+                src="/images/logosebentala.png" 
+                alt="Logo"
+                width={130}  // Set appropriate width
+                height={30}  // Set appropriate height  
+              />
+            </div>
           </Link>
           <div className='flex gap-6 mt-4 sm:mt-0 justify-end '>
             <Footer.Icon href='https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRwRrtbdptxzRSpPqJKbdTLMHVhClPPtMBqqZtTfbcNDpLZzCkhRPkqTDQZkbdcVJbVZjgzn' target='_blank' icon={BsEnvelope} className='text-white' />

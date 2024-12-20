@@ -9,6 +9,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { dark, light } from '@clerk/themes';
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
 
 export default function Header() {
@@ -38,14 +39,14 @@ useEffect(() => {
         href='/'
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
-       
-        <img 
+      <div>
+        <Image 
           src="/images/logosebentala.png" 
           alt="Logo"
           width={130}  // Set appropriate width
           height={30}  // Set appropriate height  
         />
-
+      </div>
        
      
       </Link>
