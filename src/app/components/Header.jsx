@@ -9,7 +9,7 @@ import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
 import { dark, light } from '@clerk/themes';
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import Image from 'next/image';
+
 
 export default function Header() {
 const path = usePathname();
@@ -39,7 +39,7 @@ useEffect(() => {
         className='self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white'
       >
        
-        <Image 
+        <img 
           src="/images/logosebentala.png" 
           alt="Logo"
           width={130}  // Set appropriate width
@@ -94,7 +94,7 @@ useEffect(() => {
         </SignedOut>
 
 
-        <Navbar.Toggle />
+        <Navbar.Toggle className='text-white bg-gradient-to-tr hover:from-cyan-600 hover:to-green-400 transition-all duration-300'/>
       </div>
       <Navbar.Collapse>
         <Link href='/'>
