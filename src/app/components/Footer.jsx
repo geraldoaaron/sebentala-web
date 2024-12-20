@@ -1,6 +1,7 @@
 'use client';
 import { Footer } from 'flowbite-react';
 import Image from 'next/image';
+
 import Link from 'next/link';
 import {
   BsEnvelope,
@@ -27,8 +28,8 @@ export default function FooterCom() {
             className='self-center whitespace-nowrap text-lg sm:text-xl font-semibold dark:text-white'
           >
             <div>
-              <img 
-                src="/images/logo.png" 
+              <Image 
+                src="/images/logosebentala.PNG" 
                 alt="Logo"
                 width={130}  // Set appropriate width
                 height={30}  // Set appropriate height  
