@@ -57,6 +57,21 @@ export default async function Home() {
       </div>
       </section>*/}
 
+      <section id="recent-posts" className="p-3 flex flex-col gap-8 py-7">
+        <div className='grid grid-cols-13 -mb-3 text-balance'>
+          <h1 className='text-3xl mt-5 font-bold col-start-2 col-end-7'>Recent News</h1>
+          <Link
+            href={'/search?category=null'}
+            className='font-dancing mt-8 text-cyan-600 hover:text-emerald-600 col-start-11 col-end-14'
+            >
+            View all posts
+          </Link> 
+        </div>
+
+          <RecentPosts limit={3} />
+         
+      </section>
+
      
       <section className="relative bg-cover bg-center bg-no-repeat bg-[url('/images/imagebckseb.png')] h-[65vh] flex items-center justify-center text-center">
       <div className="absolute inset-0 bg-gradient-to-b from-[rgba(16,52,36,0.7)] to-[rgba(72,187,120,0.7)]"></div>
@@ -76,15 +91,7 @@ export default async function Home() {
 
 
 
-      <section id="recent-posts" className="p-3 flex flex-col gap-8 py-7">
-        <RecentPosts limit={3} />
-        <Link
-          href={'/search?category=null'}
-          className='text-lg text-teal-500 hover:underline text-center'
-          >
-          View all posts
-        </Link>        
-      </section>
+     
     </div>
   </Suspense>
   );
