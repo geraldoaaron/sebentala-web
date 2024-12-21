@@ -130,7 +130,8 @@ export default function CreatePostPage() {
               <option value='#sebentalaasuh'>#sebentalaasuh</option>
             </Select>
           </div>
-          <p className='text-red-500 font-medium text-sm'>Image size must less than 3 mb</p>
+
+          <p className='text-red-500 font-medium text-sm'>Image size must less than 2 mb</p>
           <div className='flex gap-4 items-center justify-between border-4 border-teal-500 border-dotted p-3'>
             <FileInput type='file' 
                 accept='image/*' 
